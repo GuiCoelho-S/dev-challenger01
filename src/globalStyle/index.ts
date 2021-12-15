@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-weight:100;
 }
 
 body {
@@ -16,12 +17,11 @@ body {
 :root {
     --black:#333333;
     --red_light:#EE5253;
+    --red:#D92223;
+    --grey:#EAEAEA;
     --green:#10AC84;
+    --white:#FFFFFF;
 }
 `
 
 export default GlobalStyle;
-
-export const redContainer = '#D92223';
-export const greyContainer = '#EAEAEA';
-export const whiteContainer = '#FFFFFF';

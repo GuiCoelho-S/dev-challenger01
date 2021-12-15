@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const ContainerHeader = styled.header`
+  margin:0 auto;
   width:clamp(300px, 100%, 1440px);
   height:80px;
-  
+  background-color:var(--red);
   display:flex;
   justify-content:space-between;
   align-items:center;
-
+  z-index:2;
   h1 {
     font-size:1.5rem;
     font-weight:700;
