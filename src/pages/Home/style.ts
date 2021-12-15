@@ -14,3 +14,18 @@ flex-direction:column;
 justify-content:space-between;
 align-items:center;
 `
+export const Introduction = styled.main`
+
+position:relative;
+width:clamp(300px, 90%, 1440px);
+height:946px;
+background-color:white;
+background-image: url("../../assets/img/1.jpg");
+padding:0 10px;
+display: flex;
+align-items:start;
+justif-contetn:center;
+gap:10px;
+border:1px solid pink;
+`
+
