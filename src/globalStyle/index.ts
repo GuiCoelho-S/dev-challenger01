@@ -14,12 +14,14 @@ body {
 }
 
 :root {
-    --grey:#EAEAEA;
     --black:#333333;
-    --white:#ffffff;
-    --red:#EE5253;
+    --red_light:#EE5253;
     --green:#10AC84;
 }
 `
 
 export default GlobalStyle;
+
+export const redContainer = '#D92223';
+export const greyContainer = '#EAEAEA';
+export const whiteContainer = '#FFFFFF';
