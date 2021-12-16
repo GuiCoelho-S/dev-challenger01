@@ -28,9 +28,8 @@ display: flex;
 flex-direction:column;
 align-items:start;
 justify-content:center;
-gap:10px;
 border:1px solid pink;
-transform:translateY(-100px);
+
 :after {
     content:'';
     width:100%;
@@ -46,6 +45,7 @@ div {
     justify-content:center;
     padding-left:30px;
     gap:20px;
+    transform:translateY(-60px);
 
     h2,h3 {
         color:white;
@@ -64,5 +64,49 @@ div {
 
     z-index:2;
 }
+
+`
+
+export const AboutUs = styled.article`
+width:clamp(300px, 100%, 1440px);
+height:500px;
+background-color:var(--white);
+-webkit-clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
+clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
+
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+
+section {
+    width:408px;
+    hieght:466px;
+
+    
+}
+
+
+article {
+    width:clamp(300px, 100%, 500px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:20px;
+
+    h3 {
+        font-size:3rem;
+        font-weight:300;
+    }
+    p {
+        font-size:1.2rem;
+    }
+}
+`
+export const Img = styled.img`
+
+width:100%;
+height:100%;
+object-fit:cover;
 
 `
