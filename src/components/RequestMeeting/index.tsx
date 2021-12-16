@@ -19,6 +19,8 @@ const RequestMeeting:React.FC<Props> = ({funcModal}) => {
     const [ phone, setPhone ] = useState("");
     const [ modalError, setModalError ] = useState(false);
 
+    let data = {name:'', number:''}
+
     const validateNumberPhone = (input:any) => {
         if(input?.value.length !== 15){
             input!.style.color = 'var(--red)';
@@ -51,6 +53,8 @@ const RequestMeeting:React.FC<Props> = ({funcModal}) => {
           .replace(/(\d{5})(\d)/, "$1-$2")
           .replace(/(-\d{4})(\d+?)$/, "$1");
       };
+
+      
 
     return(
         <S.ContainerRequest>
@@ -90,6 +94,7 @@ const RequestMeeting:React.FC<Props> = ({funcModal}) => {
                             onChange={(e) => {
                                 setPhone(maskPhone(e.target.value))
                                 validateNumberPhone(inputNumberRef.current);
+
                             }}
                         />
                         {
@@ -107,6 +112,9 @@ const RequestMeeting:React.FC<Props> = ({funcModal}) => {
                     onClick={() => {
                         if(statusName === true && statusNumber === true){
                             setModalError(false);
+                            data.name = inputNameRef.current!.value;
+                            data.number = inputNumberRef.current!.value;
+                            console.log(data)
                             funcModal(true);
                             window.scrollTo(0, 0);
                         } else {

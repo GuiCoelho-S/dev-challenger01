@@ -11,7 +11,7 @@ const Home: React.FC = () => {
 
     const myRef = useRef<null | HTMLDivElement>(null)
     const executeScroll = () => myRef.current!.scrollIntoView() 
-    const [ modalAccept, setModalAccept ] = useState(true);
+    const [ modalAccept, setModalAccept ] = useState(false);
 
     function functionalModal (value:boolean) {
         setModalAccept(value)
