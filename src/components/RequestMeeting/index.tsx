@@ -1,9 +1,10 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { UIButton } from '../../design/button';
 import { UIInput } from '../../design/input';
 import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
 
 import * as S from './style';
+
 
 const RequestMeeting:React.FC = () => {
 
@@ -27,6 +28,7 @@ const RequestMeeting:React.FC = () => {
             setStatusNumber(true);
         }
     }
+    
     const validateName = (input:any) => {
         if(input?.value.length !== 0){
             input!.style.color = 'var(--green)';
@@ -49,7 +51,7 @@ const RequestMeeting:React.FC = () => {
 
     return(
         <S.ContainerRequest>
-            <div>
+            <div >
                 <h3>Mande um oi, ligamos para você!</h3>
                 <p>Preencha seus dados para que a gente possa entrar em contato.</p>
                 <S.userInteraction>

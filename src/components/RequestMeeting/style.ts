@@ -14,9 +14,8 @@ background-color:var(--white);
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    padding: 40px 0;
+    padding: 60px 0;
     gap:20px;
-    bordeR:1px solid red;
 
     h3 {
       font-size:3rem;

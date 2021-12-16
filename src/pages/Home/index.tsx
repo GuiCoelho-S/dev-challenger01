@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Header from '../../components/Header';
 import { UIButton } from '../../design/button';
 import * as S from './style';
@@ -7,6 +7,10 @@ import Img02 from '../../assets/img/image-02.png';
 import RequestMeeting from '../../components/RequestMeeting';
 
 const Home: React.FC = () => {
+
+    const myRef = useRef<null | HTMLDivElement>(null)
+    const executeScroll = () => myRef.current!.scrollIntoView() 
+    
     return(
         <S.HomeContainer>
             <Header />
@@ -14,7 +18,10 @@ const Home: React.FC = () => {
                 <div>
                     <h3>Desenvolvedores prontos para ação</h3>
                     <h2>Seu projeto pronto na velocidade da luz</h2>
-                    <UIButton color={'var(--red_light)'} width={'280px'}>
+                    <UIButton 
+                        color={'var(--red_light)'} 
+                        width={'280px'}
+                        onClick={executeScroll}>
                         <p>Peça uma reunião</p>
                         <AiOutlineArrowDown />
                     </UIButton>
@@ -29,7 +36,12 @@ const Home: React.FC = () => {
                     <S.Img src={Img02} alt="imagem de uma pessoa refletindo" />
                 </section>
             </S.AboutUs>
+            <span ref={myRef}></span>
            <RequestMeeting />
+           <S.FooterHome>
+               <p>Desafio 1 - front-end iniciante</p>
+               <p>Iniciativa <span>DEV HALL</span></p>
+           </S.FooterHome>
         </S.HomeContainer>
         
     )

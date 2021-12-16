@@ -71,8 +71,8 @@ export const AboutUs = styled.article`
 width:clamp(300px, 100%, 1440px);
 height:500px;
 background-color:var(--white);
--webkit-clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
-clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
+-webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 
 display:flex;
 align-items:center;
@@ -82,10 +82,7 @@ flex-wrap:wrap;
 section {
     width:408px;
     hieght:466px;
-
-    
 }
-
 
 article {
     width:clamp(300px, 100%, 500px);
@@ -104,9 +101,23 @@ article {
 }
 `
 export const Img = styled.img`
-
 width:100%;
 height:100%;
 object-fit:cover;
+`
 
+export const FooterHome = styled.footer`
+
+width:100%;
+height:90px;
+background-color:var(--grey);
+display:grid;
+place-items:center;
+padding:16px 0;
+span {
+    font-weight:700;
+}
+P {
+    FONT-WEIGHT:300;
+}
 `

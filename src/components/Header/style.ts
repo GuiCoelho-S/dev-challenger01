@@ -30,11 +30,25 @@ a {
   display: flex;
   align-items:center;
   justify-content:center;
+  position:relative;
 
   svg {
     height:50%;
     width:50%;
     fill:white;
+  }
+
+  outline:1px solid transparent;
+
+  :hover, :focus {
+    :after {
+      content:'';
+      border:2px solid white;
+      width:55px;
+      height: 55px;
+      border-radius:50%;
+      position:absolute;
+    }
   }
 }
 `
