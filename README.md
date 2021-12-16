@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+<img align="right" src="https://forthebadge.com/images/badges/made-with-javascript.svg" alt="feito com javascript"/>
+<br><br>
+<h1 align="center">Desafio Dev Hall 01</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<p>Projeto que simula uma landing page simples, projeto desenvolvidor por <a href="https://github.com/mateusavila" target="_blank">Mateus Ávila</a> e todos os outros administradores do discord <strong>Pessoas de Tech</strong> caso você seja da área de tecnologia e está a procura de melhorar, recomendo que entre no nosso discord, para acessá-lo, basta clicar <a href="https://discord.gg/cN6PdBja" target="_blank">aqui</a>.</p>
 
-### `yarn start`
+<div align="right">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[![Generic badge](https://img.shields.io/badge/STATUS:-finalizado-<COLOR>.svg)](https://shields.io/)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+</div>
 
-### `yarn test`
+<center>
+    <img src="./github/readmeImg.png" alt="imagem de apresentação da aplicação" />
+</center>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<center>
+<h3>Bibliotecas utilizadas</h3>
 
-### `yarn build`
+![Badge](https://img.shields.io/badge/Typescript-4.4.2-%232f8bfa?style=for-the-badge&logo=ghost)
+![Badge](https://img.shields.io/badge/Styled%20Components-v5.3.3-%23e076ab?style=for-the-badge&logo=ghost)
+![Badge](https://img.shields.io/badge/React%20Router-v6.1.1-%23343438?style=for-the-badge&logo=ghost)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="./github/react-v17.0.2.svg" alt="logo do react"/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</center>
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Tópicos centrais
+=================
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [Tecnologias usadas](#tecnologias)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* [Instalação](#instalacao)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [Estruturação](#estruturacao)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h2 align="center" id="tecnologias">Tecnologias utilizadas</h2>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p>O projeto foi desenvolvidor utilizando ReactJS utliziando <i>styled-components</i> para a estilização, apesar do desafio ser apenas de uma única página, a estrutura foi desenvolvida para ser escalável, suportando novas páginas caso seja necessário no futuro, além de possuir as principais tecnologias cobiçadas n omomento, como <strong> typescript</storng> e o <strong> styled-components</p>, não foi utilizada nenhuma outra lib como boostrap, material UI ou chackra UI.
+<br>
+
+<h2 align="center" id="tecnologias">Instalação</h2>
+
+<p>A aplicação está disponível no netlify, para acessá-la <a href="https://dev-hall-01-coelho.netlify.app/" target="_blank">clique aqui</a> mas caso você queira mexer em sua máquina local, basta rodar o comando 
+
+```
+yarn
+```
+
+<br>
+<p>Isso é necessário para adicionar as dependências de desenvolvimento na sua máquina, partindo do pressuposto que você possui o node JS intalado em seu sistema, caso não o tenha, baixe-o antes de tentar rodar essa aplicação.</p>
+
+<h2 id="estruturacao">Estruturação</h2>
+
+<p>Neste modelo, possuímos 4 diretórios principais:
+
+- pages 
+- components
+- design
+- Routes
+
+Como o nome sugere, cada diretório possui uma função única. O diretório /routes é onde possui o arquivo de rotas, lá que você deverá adicionar novas páginas, recomendado que saiba como usar a lib <i>react router dom </i> para fazer as modificações cabíveis.
+<br><br>
+Components é a página onde você criará seus compoenntes funcionais ou apenas componentes estilizados como o `<Header>` nesse exemplo.
+<br><br>
+Já a página design possui componentes globais que possui uma grande quantidade de especificações de estilização, como hover e animações básicas de CSS, foi criada essa página para que fosse possível reutilizar esses componentes visuais.
+</p>
+<br><br>
+
+<center>
+<a href="https://github.com/GuiCoelho-S" target="_blank"><img src="./github/desenvolvido-por-gui-coelho.svg" alt="badge" /></a>
+</center>
