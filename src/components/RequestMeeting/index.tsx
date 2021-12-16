@@ -5,16 +5,19 @@ import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
 
 import * as S from './style';
 
+interface Props {
+    funcModal:(e:boolean) => void
+}
 
-const RequestMeeting:React.FC = () => {
+const RequestMeeting:React.FC<Props> = ({funcModal}) => {
 
     const inputNumberRef  = useRef<HTMLInputElement>(null);
     const inputNameRef  = useRef<HTMLInputElement>(null);
 
-    const [statusNumber, setStatusNumber ] = useState<boolean>();
-    const [statusName, setStatusName ] = useState<boolean>();
-    const [phone, setPhone] = useState("");
-
+    const [ statusNumber, setStatusNumber ] = useState<boolean>();
+    const [ statusName, setStatusName ] = useState<boolean>();
+    const [ phone, setPhone ] = useState("");
+    const [ modalError, setModalError ] = useState(false);
 
     const validateNumberPhone = (input:any) => {
         if(input?.value.length !== 15){
@@ -100,9 +103,25 @@ const RequestMeeting:React.FC = () => {
                             : (<></>)
                         }
                     </aside>
-                    <UIButton color={'var(--green)'} width={'280px'} >Peça uma reunião</UIButton>
+                    <UIButton color={'var(--green)'} width={'280px'} 
+                    onClick={() => {
+                        if(statusName === true && statusNumber === true){
+                            setModalError(false);
+                            funcModal(true);
+                            window.scrollTo(0, 0);
+                        } else {
+                            setModalError(true);
+                        }
+                    }}
+                    >Peça uma reunião</UIButton>
                 </S.userInteraction>
+                {
+                modalError 
+                ? (<S.ModalError><p>Por favor, revise seus dados</p></S.ModalError>)
+                : (<></>)
+            }
             </div>
+            
         </S.ContainerRequest>
     )
 }

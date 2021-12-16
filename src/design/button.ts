@@ -27,7 +27,7 @@ export const UIButton = styled.button<ButtonProps>`
     transform:translateY(20px);
     transition:all 0.5s ease-out;
 
-    :hover, :focus {
+    :hover {
         background-color:white;
         color:${(props) => props.color ? (props.color) : ('var(--red)')};
     }

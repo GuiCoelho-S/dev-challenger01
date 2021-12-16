@@ -8,6 +8,7 @@ display:flex;
 align-items:center;
 justify-content:Center;
 background-color:var(--white);
+position:relative;
 
   div {
     width:clamp(300px, 100%, 1000px);
@@ -18,7 +19,7 @@ background-color:var(--white);
     gap:20px;
 
     h3 {
-      font-size:3rem;
+      font-size:clamp(2rem, 5vw, 3rem);
       font-weight:700;
     }
 
@@ -30,6 +31,13 @@ background-color:var(--white);
       transform:none;
     }
   }
+
+  @media (max-width:550px){
+    div {
+      width:90% !important;
+    }
+  }
+
 `;
 
 export const userInteraction = styled.section`
@@ -78,4 +86,19 @@ export const Denied = styled.span`
   svg {
     fill:var(--red);
   }
+`
+
+export const ModalError = styled.aside`
+
+width:100%;
+padding-top:20px;
+height:40px;
+border:1px solid transparent;
+top:20px;
+right:20px;
+
+p {
+  text-align:center;
+  color:red;
+}
 `
