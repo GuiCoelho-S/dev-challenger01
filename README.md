@@ -13,11 +13,10 @@
 
 </div>
 
-<center>
-    <img src="./github/readmeImg.png" alt="imagem de apresentação da aplicação" />
-</center>
+<img align="center" src="./github/readmeImg.png" alt="imagem de apresentação da aplicação" />
 
 <center>
+
 <h3>Bibliotecas utilizadas</h3>
 
 ![Badge](https://img.shields.io/badge/Typescript-4.4.2-%232f8bfa?style=for-the-badge&logo=ghost)
